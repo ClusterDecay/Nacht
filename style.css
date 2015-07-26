@@ -153,7 +153,7 @@ Lists
 ol,
 ul			{ margin: 15px 0; }
 ol			{ list-style-type: decimal; }
-ul			{ list-style: none; }
+ul			{ list-style-type: disc; }
 ul ul,
 ol ol,
 ul ol,
