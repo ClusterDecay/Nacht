@@ -1,0 +1,232 @@
+/*
+Theme Name: Nacht
+Author: Cluster Decay
+Author URI: http://www.clusterdecay.net
+Description: You can do whatever you want with this theme: copy it, edit it, tell everyone that your mum made it, I won't be angry ;-)
+Version: Who cares?
+*/
+
+/*
+===========================
+Resets & Defaults
+===========================
+*/
+
+/* Reset - courtesy of http://meyerweb.com */
+@import "reset.css";
+
+/* Box Sizing */
+*			{ -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
+ 
+/* Absolute Positioning */
+li			{ position:relative; }
+
+/* Images */
+img			{ width: 100%; height: auto; border-radius: 4px; }
+
+/* Captions */
+.wp-caption		{ max-width: 100%; }
+.wp-caption p.wp-caption-text { text-align: center; }
+
+/*
+=========================== 
+Typography
+===========================
+*/
+
+/* Rendering */
+html, 
+input, 
+textarea		{ -webkit-font-smoothing: antialiased; }
+
+/* Families */
+body, 
+input, 
+textarea		{ font: 400 14px/23px 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+b,
+strong			{ font-weight: bold; }
+
+/* Links */
+a			{ text-decoration: none; color: #8899A6; }
+.title a,
+.meta_top a,
+.meta-bottom,
+.menu .current-menu-item a { color: #444; }
+a:focus			{ outline: thin dotted; }
+a:hover			{ text-decoration:underline; }
+
+/* Headers */
+h2,
+h2 a			{ font-weight: bold; color: #444; }
+.archives h2 a		{ color: #66757F; } 
+.sidebox h2		{ color: #66757F; font-size: 18px; font-weight: 300; line-height: 18px; }
+
+/* 
+===========================
+Basic Layout
+===========================
+*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+html			{ overflow-y: scroll; -webkit-text-size-adjust: 100%; }
+body			{ background-color: #F5F6F5; color: #444; margin: 0; }
+#wrap, #header, #footer	{ position: relative; max-width: 59.375em; margin: 0 auto; }
+#wrap			{ margin-top: 20px; margin-bottom: 20px; padding: 0 10px; }
+#header			{ padding: 15px 15px 5px 15px; }
+#sidebar		{ padding: 0 0 0 1.25em; background-color: transparent; }
+#header			{ margin-bottom: 10px; font-size: 12px; background-color: transparent; }
+
+/*
+===========================
+Header
+===========================
+*/
+
+#header .title,
+#header .desc,
+#header .menu ul,
+#header .icon		{ text-align: center; padding-left: 0; }
+#header .icon		{ float: none; }
+#header .title		{ padding-top: 0px; }
+
+/*
+===========================
+Sidebar
+===========================
+*/
+#sidebar		{ display: none; }
+.sidebox		{ margin-bottom: 10px; background-color: #FFF; text-align: left; border: 1px solid #DDD; border-radius: 4px; padding: 15px; color: #8899A6; font-size: 12px; }
+.bloginfo		{ overflow: hidden; }
+.icon			{ float: left; }
+.icon img		{ width: 70px; height: auto; }
+.title,
+.desc			{ padding-left: 80px; }
+.title			{ font-size: 18px; font-weight: 700; word-wrap: break-word; text-align: left; padding-top: 0px; }
+.desc			{ font-size: 12px; line-height: 16px; color: #8899A6; text-align: left; }
+
+/* Menu */
+.menu			{ padding: 0; margin: 0; font-size: 11px; text-transform: uppercase; }
+.menu ul 		{ text-align: left; padding: 0; margin: 0; }
+.menu ul li		{ display: inline; }
+ul.menu li:after	{ content:" · "; }
+ul.menu li:last-child:after{ content:""; }
+
+/*
+===========================
+Posts
+===========================
+*/
+
+/* Paragraphs */
+.post, 
+.page			{ background-color: #FFF; border: 1px solid #DDD; border-radius: 4px; margin-bottom: 10px; }
+.page			{ padding-bottom: 5px; }
+.entry			{ padding: 0px 25px 10px 25px; text-align: left; }
+p			{ padding: 0; margin: 10px 0 0; }
+blockquote		{ color: #8899A6; margin: 15px; font-style: italic; border-left: 3px solid #f1f1f1; padding: 16px 32px; }
+em, quote		{ font-style: italic; }
+quote			{ color: #8899A6; }
+code			{ color: #111; padding: 2px 5px; background-color: #F1F1F1; }
+
+/* Metas */
+.meta_top		{ padding: 15px 25px 0 25px; text-align: left; font-size: 14px; color: #8899A6; }
+.meta_bottom		{ padding: 10px 25px; font-size: 14px; background-color: #F5F6F5; }
+.post_tags		{ display: inline-block; }
+div.tag_cloud a		{ white-space: nowrap; }
+.post_tags a:before,
+div.tag_cloud a:before	{ content: "#"; }
+.post_tags a,
+div.tag_cloud a		{ margin-right: 8px; }
+.post_tags a:last-child,
+div.tag_cloud a:last-child { margin-right: 0px; }
+.tag_cloud		{ font-size: 12px; padding-top: 5px; }
+a.notes-link		{ display: block; }
+.date			{ display: block; font-size: 12px; line-height: 1; padding-bottom: 5px; }
+.separator		{ display: none; }
+
+/*
+===========================
+Lists
+===========================
+*/
+ol,
+ul			{ margin: 15px 0; }
+ol			{ list-style-type: decimal; }
+ul			{ list-style: none; }
+ul ul,
+ol ol,
+ul ol,
+ol ul			{ margin: 0; }
+ol,
+ul			{ padding: 0 0 0 40px; }
+
+/*
+===========================
+Archive
+===========================
+*/
+.archives		{ padding: 10px 25px 0px 25px; }
+.archives h2		{ font-size: 14px; }
+.archives ul		{ margin: 0px 0px 15px; }
+.archives ul:last-child	{ margin: 0px 0px 10px; }
+.archives li		{ list-style: none; }
+.archives ul li a	{ font-size: 14px; }
+.archives .date		{ font-size: 12px; }
+
+/*
+===========================
+Navigation
+===========================
+*/
+#infscr-loading 	{ text-align: center; margin-top: 15px;}
+#infscr-loading img	{ width: 24px; height: auto; }
+
+/*
+===========================
+Fixing a few WP defaults
+===========================
+*/
+.gallery		{ padding-top: 10px; }
+.gallery-item 		{ float:left; border-left: 4px solid #fff; border-right: 4px solid #fff; 
+}
+.gallery-columns-3 .gallery-item {
+    width: 33.33%;
+}
+.gallery-columns-4 .gallery-item {
+    width: 25%;
+}
+.gallery-columns-5 .gallery-item {
+    width: 20%;
+}
+
+/*
+===========================
+Responsive video embeds
+===========================
+*/
+.video 			{ position: relative; padding-bottom: 56.25%; padding-top: 20px; height: 0; overflow: hidden; }
+.video iframe,
+.video object,
+.video embed 		{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/*
+===========================
+Media Queries
+===========================
+*/
+@media screen and (min-width: 25em ) {
+  h2,
+  .separator,
+  a.notes-link,
+  .date			{ display: inline; }
+  .date:before		{ content:" · "; }
+}
+@media screen and (min-width: 45.375em ) {
+  body			{ font: 400 16px/26px 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  #content		{ margin-left: 16.70em; }
+  #sidebar		{ position: absolute; top: 0; left: 0; width: 17.325em; }
+  #sidebar		{ display: block; }
+  #header		{ display: none; }
+  #wrap			{ padding: 0 20px; margin-top: 40px; margin-bottom: 40px; }
+}
