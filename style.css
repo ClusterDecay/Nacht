@@ -1,7 +1,7 @@
 /*
 Theme Name: Nacht
-Author: Cluster Decay
-Author URI: http://www.clusterdecay.net
+Author: Gamrok
+Author URI: http://www.gamrok.net
 Description: You can do whatever you want with this theme: copy it, edit it, tell everyone that your mum made it, I won't be angry ;-)
 Version: Who cares?
 */
@@ -23,6 +23,8 @@ li			{ position:relative; }
 
 /* Images */
 img			{ width: 100%; height: auto; border-radius: 4px; }
+img.alignleft,
+img.alignright		{ width: auto; } 
 
 /* Captions */
 .wp-caption		{ max-width: 100%; }
@@ -59,7 +61,7 @@ a:hover			{ text-decoration:underline; }
 h2,
 h2 a			{ font-weight: bold; color: #444; }
 .archives h2 a		{ color: #66757F; } 
-.sidebox h2		{ color: #66757F; font-size: 18px; font-weight: 300; line-height: 18px; }
+.sidebox h2		{ color: #444; font-size: 18px; font-weight: 300; line-height: 18px; }
 
 /* 
 ===========================
@@ -96,14 +98,14 @@ Sidebar
 ===========================
 */
 #sidebar		{ display: none; }
-.sidebox		{ margin-bottom: 10px; background-color: #FFF; text-align: left; border: 1px solid #DDD; border-radius: 4px; padding: 15px; color: #8899A6; font-size: 12px; }
+.sidebox		{ margin-bottom: 10px; background-color: #FFF; text-align: left; border: 1px solid #DDD; border-radius: 4px; padding: 15px; font-size: 12px; }
 .bloginfo		{ overflow: hidden; }
 .icon			{ float: left; }
 .icon img		{ width: 70px; height: auto; }
 .title,
-.desc			{ padding-left: 80px; }
+.desc			{ padding-left: 80px; color: #8899A6; }
 .title			{ font-size: 18px; font-weight: 700; word-wrap: break-word; text-align: left; padding-top: 0px; }
-.desc			{ font-size: 12px; line-height: 16px; color: #8899A6; text-align: left; }
+.desc			{ font-size: 12px; line-height: 16px; text-align: left; }
 
 /* Menu */
 .menu			{ padding: 0; margin: 0; font-size: 11px; text-transform: uppercase; }
@@ -136,14 +138,15 @@ code			{ color: #111; padding: 2px 5px; background-color: #F1F1F1; }
 div.tag_cloud a		{ white-space: nowrap; }
 .post_tags a:before,
 div.tag_cloud a:before	{ content: "#"; }
-.post_tags a,
+.post_tags ul li,
 div.tag_cloud a		{ margin-right: 8px; }
-.post_tags a:last-child,
+.post_tags ul li:last-child,
 div.tag_cloud a:last-child { margin-right: 0px; }
 .tag_cloud		{ font-size: 12px; padding-top: 5px; }
-a.notes-link		{ display: block; }
-.date			{ display: block; font-size: 12px; line-height: 1; padding-bottom: 5px; }
 .separator		{ display: none; }
+.date			{ display: block; font-size: 12px; line-height: 14px; padding-bottom: 5px; }
+.post_tags ul		{ list-style: none; padding: 0; margin:0; }
+.post_tags ul li	{ display: inline-block; }
 
 /*
 ===========================
@@ -199,6 +202,8 @@ Fixing a few WP defaults
 .gallery-columns-5 .gallery-item {
     width: 20%;
 }
+img.alignleft		{ float: left; margin: 0 15px 0 0; }
+img.alignright		{ float: right; margin: 0 0 0 15px; }
 
 /*
 ===========================
@@ -217,10 +222,8 @@ Media Queries
 */
 @media screen and (min-width: 25em ) {
   h2,
-  .separator,
-  a.notes-link,
-  .date			{ display: inline; }
-  .date:before		{ content:" · "; }
+  .date,
+  .separator		{ display: inline-block; }
 }
 @media screen and (min-width: 45.375em ) {
   body			{ font: 400 16px/26px 'Helvetica Neue', Helvetica, Arial, sans-serif; }
